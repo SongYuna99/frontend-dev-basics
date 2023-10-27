@@ -13,13 +13,11 @@ const myAsyncFn = function (param) {
   });
 };
 
-// usageI: ~ then ~ catch
-myAsyncFn("")
-  .then(function (result) {
-    console.log(result);
-  })
-  .catch(function (err) {
-    console.error(err);
-  });
+// usageII: async ~ await
+const ex03 = async function () {
+  const result = await myAsyncFn("data");
+  console.log(result);
+};
 
+ex03();
 console.log("wait....");
